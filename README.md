@@ -63,15 +63,19 @@ surface-audit scan https://preview.example.com \
 
 Detailed installation: [`docs/INSTALL.md`](docs/INSTALL.md).
 
-Container-first teams can use the published GHCR image on tagged
-releases:
+Container-first teams can use the published GHCR image on tagged releases:
 
+### Pull the image
+```bash
+docker pull ghcr.io/dev-ugurkontel/surface-audit:latest
+```
+### Run the container
 ```bash
 docker run --rm ghcr.io/dev-ugurkontel/surface-audit:latest \
-    scan https://preview.example.com --fail-on HIGH
+  scan https://preview.example.com --fail-on HIGH
 ```
 
-## Security Regression Diff
+### Security Regression Diff
 
 ```bash
 # Capture a baseline once
